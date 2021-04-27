@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/layout/Nav";
+import User from "./components/layout/User"
 const Routes = () => {
   function Home() {
     return <h2>Home</h2>;
@@ -10,9 +11,6 @@ const Routes = () => {
     return <h2>About</h2>;
   }
 
-  function Users() {
-    return <h2>Users</h2>;
-  } 
   const [texto,setTexto] = useState('Hola Mundo');
   const [productos, setProductos] = useState([]); // ACA SE CARGA EL STORE
 
@@ -36,7 +34,7 @@ const Routes = () => {
             <About />
           </Route>
           <Route path="/users">
-            <Users />
+            <User/>
           </Route>
           <Route path="/">
             <Home />
